@@ -92,9 +92,23 @@ public class Main {
         int leng = arrayList.size();
         System.out.println("Enter the expense you need to search:\t");
         //Complete the method
+        Scanner s = new Scanner(System.in);
+        int searchElement = s.nextInt(); 
+        boolean found = false; 
+        //will be using linear search, since we can't assume the Expenses are sorted
+        int list_length = arrayList.size();
+        for(int i = 0; i < list_length; i++){
+            if (searchElement == arrayList.get(i)) {
+            	found = true; 
+             }
+         }
+        System.out.println(found ? "The expense " + searchElement + " has been found on the list.\n " : "The expense " + searchElement + " hasn't been found on the list.\n");
+        
+        
     }
     private static void sortExpenses(ArrayList<Integer> arrayList) {
         int arrlength =  arrayList.size();
        //Complete the method. The expenses should be sorted in ascending order.
+        
     }
 }

@@ -109,6 +109,25 @@ public class Main {
     private static void sortExpenses(ArrayList<Integer> arrayList) {
         int arrlength =  arrayList.size();
        //Complete the method. The expenses should be sorted in ascending order.
-        
+        if(arrlength <= 1 )
+        	System.out.println("List only contains 1 or less elements. Already Sorted");
+        for (int i = 0; i < arrayList.size(); i++) {
+            for (int j = 0; j < arrayList.size(); j++) {
+                
+            	if (arrayList.get(i) < arrayList.get(j)) {
+
+                    int temp = arrayList.get(i);
+                    int temp2 = arrayList.get(j);
+                    arrayList.set(j, temp);
+                    arrayList.set(i,temp2);
+
+                }
+
+            }
+
+        }       
+        System.out.println("List has been sorted: "+ arrayList);
+      
     }
+        
 }
